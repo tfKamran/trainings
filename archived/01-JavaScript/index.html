@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Introduction to JavaScript</title>
+        <!--        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />-->
+        <link rel="stylesheet" href="./styles/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" href="./styles/jquery.mobile.custom.theme.min.css" />
+        <link rel="stylesheet" href="./styles/myTheme.min.css" />
+        <link rel="stylesheet" href="./styles/main.css" />
+    </head>
+
+    <body>
+        <div id="slide1" data-role="page" data-theme="b">
+            <article data-role="content">
+                <h1>Introduction to JavaScript</h1>
+            </article>
+        </div>
+
+        <div id="slide2" data-role="page" data-theme="b">
+            <header data-role="header">
+                Why introduction?
+            </header>
+            <article data-role="content">
+                <p>
+                    JavaScript has a reasonable claim to being the world's most misunderstood programming language.
+                </p>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide3" data-role="page" data-theme="b">
+            <header data-role="header">
+                Overview
+            </header>
+            <article data-role="content">
+                <span>Types in JavaScript:</span>
+                <ul>
+                    <li>Number</li>
+                    <li>String</li>
+                    <li>Boolean</li>
+                    <li>Function</li>
+                    <li>Object</li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide4" data-role="page" data-theme="b">
+            <header data-role="header">
+                Overview
+            </header>
+            <article data-role="content">
+                <span>The real structure:</span>
+                <ul>
+                    <li>Number</li>
+                    <li>String</li>
+                    <li>Boolean</li>
+                    <li>Object
+                        <ul>
+                            <li>Function</li>
+                            <li>Array</li>
+                            <li>Date</li>
+                            <li>RegExp</li>
+                        </ul>
+                    </li>
+                    <li>Undefined</li>
+                    <li>Null</li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide5" data-role="page" data-theme="b">
+            <header data-role="header">
+                Numbers
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>"double-precision 64-bit format IEEE 754 values"</li>
+                    <li>
+                        Demo:
+                        <textarea class="theLiveCode"></textarea>
+                        <input type="button" class="runCode" value="Run" data-inline="true" />
+                        <div class="theLog" disabled>
+
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide6" data-role="page" data-theme="b">
+            <header data-role="header">
+                Strings
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>Unicode characters, with each character represented by a 16-bit number</li>
+                    <li>
+                        Demo:
+                        <textarea class="theLiveCode"></textarea>
+                        <input type="button" class="runCode" value="Run" data-inline="true" />
+                        <div class="theLog">
+
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide7" data-role="page" data-theme="b">
+            <header data-role="header">
+                Other Types
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>"null" is indicates a non-value</li>
+                    <li>"undefined" is indicates an  uninitialized value</li>
+                    <li>Any value can be converted to a boolean according to the following rules:
+                        <ul>
+                            <li>false, 0, the empty string (""), NaN, null, and undefined all become false</li>
+                            <li>all other values become true</li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        Demo:
+                        <textarea class="theLiveCode"></textarea>
+                        <input type="button" class="runCode" value="Run" data-inline="true" />
+                        <div class="theLog">
+
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide8" data-role="page" data-theme="b">
+            <header data-role="header">
+                Variables
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>New variables in JavaScript are declared using the var keyword</li>
+                    <li>
+                        Demo:
+                        <textarea class="theLiveCode"></textarea>
+                        <input type="button" class="runCode" value="Run" data-inline="true" />
+                        <div class="theLog">
+
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide9" data-role="page" data-theme="b">
+            <header data-role="header">
+                Operators
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>+, -, *, / and % are numerical operators</li>
+                    <li>= assigns values</li>
+                    <li>Things like x += y extend to x = x + y and these work with all numerical operators</li>
+                    <li>== checks equality</li>
+                    <li>=== checks equality with type</li>
+                    <li>
+                        Demo:
+                        <textarea class="theLiveCode"></textarea>
+                        <input type="button" class="runCode" value="Run" data-inline="true" />
+                        <div class="theLog">
+
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide10" data-role="page" data-theme="b">
+            <header data-role="header">
+                Control Structures
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>if, else if, else</li>
+                    <li>while</li>
+                    <li>for</li>
+                    <li>switch</li>
+                    <li>(condition) ? (true) : (false)</li>
+                    <li>== checks equality</li>
+                    <li>=== checks equality with type</li>
+                    <li>&&, ||, !</li>
+                    <li>
+                        Demo:
+                        <textarea class="theLiveCode"></textarea>
+                        <input type="button" class="runCode" value="Run" data-inline="true" />
+                        <div class="theLog">
+
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide11" data-role="page" data-theme="b">
+            <header data-role="header">
+                Objects
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>Simple collections of name-value pairs</li>
+                    <li>"name" part is a JavaScript string</li>
+                    <li>value can be any JavaScript value</li>
+                    <li>Basic ways of creating emty objects:
+                        <ul>
+                            <li>var obj = new Object();</li>
+                            <li>var obj = {};</li>
+                        </ul>
+                    </li>
+                    <li>
+<pre>function Person(name, age)
+{
+  this.name = name;
+  this.age = age;
+}
+
+//Defining an object
+var You = new Person("You", 24);</pre>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide12" data-role="page" data-theme="b">
+            <header data-role="header">
+                Objects
+            </header>
+            <article data-role="content">
+                Accessing properties of an object:
+                <ul>
+                    <li>
+                        <pre>
+obj.name = "Simon";
+var name = obj.name;
+                        </pre>
+                    </li>
+                    <li>
+                        <pre>
+obj["name"] = "Simon";
+var name = obj["name"];
+                        </pre>
+                    </li>
+                    <li>
+                        <pre>
+obj.for = "Simon"; // Syntax error,
+//because 'for' is a reserved word
+obj["for"] = "Simon"; // works fine
+                        </pre>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide13" data-role="page" data-theme="b">
+            <header data-role="header">
+                Objects
+            </header>
+            <article data-role="content">
+                Can be initialized as:
+                <ul>
+                    <li>
+<pre>var obj = {
+    name: "Carrot",
+    "for": "Max",
+    details: {
+    color: "orange",
+    size: 12
+    }
+}</pre>
+                    </li>
+                </ul>
+                Attributes can be chained like:
+                <ul>
+                    <li>
+<pre>> obj.details.color
+orange
+> obj["details"]["size"]
+12</pre>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide14" data-role="page" data-theme="b">
+            <header data-role="header">
+                Arrays
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>Arrays are a special type of object</li>
+                    <li>Magic property called 'length'</li>
+                    <li>'length' is always one more than the last index</li>
+                    <li>
+                        Demo:
+                        <textarea class="theLiveCode"></textarea>
+                        <input type="button" class="runCode" value="Run" data-inline="true" />
+                        <div class="theLog">
+
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide15" data-role="page" data-theme="b">
+            <header data-role="header">
+                Arrays
+            </header>
+            <article data-role="content">
+                <span>Iterating over Arrays</span>
+                <ul>
+                    <li>
+<pre>for (var i = 0; i < a.length; i++) {
+    // Do something with a[i]
+}</pre>
+                    </li>
+                    <li>
+<pre>for (var i = 0, len = a.length; i < len; i++) {
+    // Do something with a[i]
+}</pre>
+                    </li>
+                    <li>
+<pre>for (var i = 0, item; item = a[i++];) {
+    // Do something with item
+}</pre>
+                    </li>
+                    <li>
+<pre>for (var i in a) {
+    // Do something with a[i]
+}</pre>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide16" data-role="page" data-theme="b">
+            <header data-role="header">
+                Functions
+            </header>
+            <article data-role="content">
+                <span>A basic function</span>
+                <ul>
+                    <li>
+<pre>function add(x, y) {
+    var total = x + y;
+    return total;
+}</pre>
+                    </li>
+                    <li>
+                        Demo:
+                        <textarea class="theLiveCode"></textarea>
+                        <input type="button" class="runCode" value="Run" data-inline="true" />
+                        <div class="theLog">
+
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide17" class="credits" data-role="page" data-theme="b">
+            <header data-role="header">
+                Credits
+            </header>
+            <article data-role="content">
+                <h1>Inspired by "A re-introduction to JavaScript (JS Tutorial)" - Simon Willison</h1>
+                - https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+<!--        <div id="templatePage" data-role="page" data-theme="b">
+            <header data-role="header">
+
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li></li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>-->
+
+<!--        <div id="templateCodeRunner" style="display: none;">
+            
+            Demo:
+            <textarea class="theLiveCode"></textarea>
+            <input type="button" class="runCode" value="Run" data-inline="true" />
+            <div class="theLog">
+
+            </div>
+        </div>-->
+
+        <!-- Scripts -->
+        <script src="./scripts/jquery-2.1.1.min.js"></script>
+        <script src="./scripts/jquery.mobile.custom.min.js"></script>
+        <script src="./scripts/main.js"></script>
+    </body>
+
+</html>

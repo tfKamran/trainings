@@ -1,0 +1,20 @@
+{
+  "name": "trainings",
+  "homepage": "https://tfKamran.github.io/trainings/",
+  "authors": [
+    "Kamran Ahmed Ansari <team.radiant@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "Apache License 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

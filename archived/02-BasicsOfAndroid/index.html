@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Basics of Android Development</title>
+        <!--        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />-->
+        <link rel="stylesheet" href="./styles/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" href="./styles/jquery.mobile.custom.theme.min.css" />
+        <link rel="stylesheet" href="./styles/myTheme.min.css" />
+        <link rel="stylesheet" href="./styles/main.css" />
+    </head>
+
+    <body>
+        <div id="slide1" data-role="page" data-theme="b">
+            <article data-role="content">
+                <h1>Basics of Android Development</h1>
+            </article>
+        </div>
+
+        <div id="slide2" data-role="page" data-theme="b">
+            <header data-role="header">
+                What is an Android application?
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>Android apps are written in the Java programming language.</li>
+		    <li>The Android SDK tools compile your code along with any data and resource files into an APK: an Android package, which is an archive file with an .apk suffix.</li>
+		    <li>One APK file contains all the contents of an Android app and is the file that Android-powered devices use to install the app.</li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide3" data-role="page" data-theme="b">
+            <header data-role="header">
+                What is Android Development?
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li>Applications ("apps"), that extend the functionality of devices, are developed primarily in the Java using the Android software development kit (SDK).</li>
+		    <li>The officially supported integrated development environment (IDE) is Eclipse using the Android Development Tools (ADT) plugin.</li>
+		    <li>Other development tools are available, including a Native Development Kit for applications or extensions in C or C++, Google App Inventor, a visual environment for novice programmers, and various cross platform mobile web applications frameworks.</li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide4" data-role="page" data-theme="b">
+            <header data-role="header">
+                What do we need?
+            </header>
+            <article data-role="content">
+                <span>Tools that we need:</span>
+                <ul>
+                    <li>Android SDK</li>
+                    <li>Eclipse</li>
+                    <li>ADT Plugin</li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide5" data-role="page" data-theme="b">
+            <header data-role="header">
+                Application Components
+            </header>
+            <article data-role="content">
+                <span>The four types of components:</span>
+                <ul>
+                    <li>Activities</li>
+                    <li>Services</li>
+                    <li>Broadcast Receivers</li>
+                    <li>Content Providers</li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide6" data-role="page" data-theme="b">
+            <header data-role="header">
+                Activating Components
+            </header>
+            <article data-role="content">
+                <span>Three of the four component types activities, services, and broadcast receivers
+                are activated by an asynchronous message called an intent. Intents bind individual
+                components to each other at runtime (you can think of them as the messengers that
+                request an action from other components), whether the component belongs to your app or
+                another.</span>
+                <ul>
+                    <li>Activities - startActivity(intent) | startActivityForResult(intent)</li>
+                    <li>Services - startService(intent) |  bindService(intent)</li>
+                    <li>Broadcast Receivers - sendBroadcast(intent)</li>
+                    <li>Content Providers - query()</li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide7" data-role="page" data-theme="b">
+            <header data-role="header">
+                The Manifest File
+            </header>
+            <article data-role="content">
+                <span>The manifest does a number of things in addition to declaring the app's components, such as:</span>
+                <ul>
+                    <li>Identify any user permissions the app requires, such as Internet access or read-access to the user's contacts.</li>
+                    <li>Declare the minimum API Level required by the app, based on which APIs the app uses.</li>
+                    <li>Declare hardware and software features used or required by the app, such as a camera, bluetooth services, or a multitouch screen.</li>
+                    <li>API libraries the app needs to be linked against (other than the Android framework APIs), such as the Google Maps library.</li>
+                    <li>And more</li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide8" data-role="page" data-theme="b">
+            <header data-role="header">
+                The Manifest File - A rough example
+            </header>
+            <article data-role="content">
+                <span>
+		    <pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest ... &gt;
+  &lt;uses-feature
+    android:name="android.hardware.camera.any"
+    android:required="true" /&gt;
+  &lt;uses-sdk android:minSdkVersion="7"
+    android:targetSdkVersion="19" /&gt;
+  &lt;application
+    android:icon="@drawable/app_icon.png" ... &gt;
+      &lt;activity
+	android:name="com.example.project.ExampleActivity"
+	android:label="@string/example_label" ... &gt;
+      &lt;/activity&gt;
+      ...
+  &lt;/application&gt;
+&lt;/manifest&gt;
+		    </pre>
+		    Note: The "..." isn't something special but just a filler to hide some dirty code
+		    that's out of the scope of this session.
+                </span>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+        <div id="slide9" class="credits" data-role="page" data-theme="b">
+            <header data-role="header">
+                Credits
+            </header>
+            <article data-role="content">
+                <h1>Application Fundamentals | Andriod Developers</h1>
+                - http://developer.android.com/guide/components/fundamentals.html
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>
+
+<!--        <div id="templatePage" data-role="page" data-theme="b">
+            <header data-role="header">
+
+            </header>
+            <article data-role="content">
+                <ul>
+                    <li></li>
+                </ul>
+            </article>
+            <footer data-role="footer">
+
+            </footer>
+        </div>-->
+
+<!--        <div id="templateCodeRunner" style="display: none;">
+            
+            Demo:
+            <textarea class="theLiveCode"></textarea>
+            <input type="button" class="runCode" value="Run" data-inline="true" />
+            <div class="theLog">
+
+            </div>
+        </div>-->
+
+        <!-- Scripts -->
+        <script src="./scripts/jquery-2.1.1.min.js"></script>
+        <script src="./scripts/jquery.mobile.custom.min.js"></script>
+        <script src="./scripts/main.js"></script>
+    </body>
+
+</html>
