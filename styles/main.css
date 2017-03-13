@@ -1,9 +1,33 @@
 html, body {
+    height: 100vh;
     margin: 0;
     padding: 0;
+    font-size: 24px;
+    background-color: #444444;
+}
+
+[data-slide] {
+    height: 100vh;
+}
+
+body * {
+    color: #EEEEEE;
 }
 
 #archive-holder {
     position: absolute;
     bottom: 0;
+}
+
+.title {
+    padding-top: 24px;
+}
+
+.title-only {
+    text-align: right;
+    font-size: 72px;
+}
+
+.content {
+    margin-top: 48px;
 }
