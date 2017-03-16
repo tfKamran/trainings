@@ -8,16 +8,153 @@
     <link rel="stylesheet" href="../styles/main.css" />
 </head>
 <body>
-    <nav class="navbar navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Network Monitoring</a>
-            </div>
+    <div data-slide="1" class="container">
+        <div class="title-only">
+            Network Monitoring
         </div>
-    </nav>
+    </div>
 
-    <div class="container-fluid">
-        
+    <div data-slide="2" class="container">
+        <div class="title">
+            <h1>Why do we need this?</h1>
+        </div>
+
+        <div class="content">
+            <ul>
+                <li>Token from producion non root build</li>
+                <li>Awarness of data flow in the app being tested</li>
+                <li>Ability to finding issues related to API calls</li>
+                <li>Server testing with almost no extra efforts</li>
+                <li>Ability to differentiate between server and client issues</li>
+                <li>I don't know... we'll get to know more once we start using it</li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-slide="3" class="container">
+        <div class="title">
+            <h1>What do we need?</h1>
+        </div>
+
+        <div class="content">
+            <ul>
+                <li>Working PC (yes Windows will do)</li>
+                <li>Working internet connection (we can always try :P)</li>
+                <li>OWASP ZAP - A network monitoring tool</li>
+                <li>Test device (non root will do)</li>
+                <li>Interest</li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-slide="4" class="container">
+        <div class="title">
+            <h1>Setting up...</h1>
+        </div>
+
+        <div class="content">
+            <ol>
+                <li>Download OWASP ZAP from <a href="#">here (https://github.com/zaproxy/zaproxy/wiki/Downloads)</a></li>
+                <li>Open OWASP ZAP</li>
+                <li>Choose "Yes, I want to persist this session"</li>
+            </ol>
+        </div>
+    </div>
+
+    <div data-slide="5" class="container">
+        <div class="title">
+            <h1>Local Proxy Server Setup</h1>
+        </div>
+
+        <div class="content">
+            <ol>
+                <li>Open Terminal/Command Prompt</li>
+                <li>Type "ifconfig" on Linux/Unix/Mac, "ipconfig" on Windows</li>
+                <li>Note your computer's IP address</li>
+                <li>Go to Tools > Options > Local Proxy in ZAP</li>
+                <li>Put in your computer's IP Address in the "Address" field</li>
+                <li>Put something like "8080" in the port field</li>
+                <li>Click on "OK"</li>
+            </ol>
+        </div>
+    </div>
+
+    <div data-slide="6" class="container">
+        <div class="title">
+            <h1>Adding a man (server *) in the middle...</h1>
+        </div>
+
+        <div class="content">
+            <ol>
+                <li>Connect the test device to the same network as your computer</li>
+                <li>Go to Settings > Wi-Fi</li>
+                <li>Long press on the connected Wi-Fi</li>
+                <li>Click on "Modify network"</li>
+                <li>Open advanced options</li>
+                <li>Select "Manual" for proxy settings</li>
+                <li>Put in the IP and port number you entered in OWASP ZAP</li>
+            </ol>
+        </div>
+    </div>
+
+    <div data-slide="7" class="container">
+        <div class="title-only">
+            <h1>And you're done!</h1>
+        </div>
+    </div>
+
+    <div data-slide="8" class="container">
+        <div class="title">
+            <h1>Observe the HTTP calls</h1>
+        </div>
+
+        <div class="content">
+            <p>
+                With this setup you can observe all the HTTP calls any of the apps on your test device are making.
+            </p>
+
+            <p>
+                If you wish to monitor the HTTPS calls too, you'll need to take a few extra steps...
+            </p>
+        </div>
+    </div>
+
+    <div data-slide="9" class="container">
+        <div class="title">
+            <h1>Extra mile...</h1>
+        </div>
+
+        <div class="content">
+            <p>
+                The reason why we use HTTPS is its security. Your network administrator will know the credentials of your online accounts if everyone used HTTP. Some of the most used apps still do, surprise!
+            </p>
+
+            <p>
+                To be able to monitor HTTPS calls, you'll need an SSL certificate to authenticate your proxy server. Don't worry, OWASP ZAP helps you with this too!
+            </p>
+
+            <ol>
+                <li>Open OWASP ZAP</li>
+                <li>Go to Tools > Options > Dynamic SSL Certificates</li>
+                <li>Click on save</li>
+                <li>Copy the saved certificate file onto the test device</li>
+                <li>On the phone open Settings > Security > Install Certificate From SD Card</li>
+                <li>Go to the location you copied the certificate at, select it</li>
+                <li>Give the certificate a name of your choice, say "ZAP"</li>
+            </ol>
+        </div>
+    </div>
+
+    <div data-slide="10" class="container">
+        <div class="title-only">
+            <h1>Enjoy!</h1>
+        </div>
+    </div>
+
+    <div data-slide="11" class="container">
+        <div class="title-only">
+            <h1>Thanks for your time.</h1>
+        </div>
     </div>
     
     <script src="../vendor/jquery/dist/jquery.min.js"></script>
