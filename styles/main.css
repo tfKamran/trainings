@@ -20,7 +20,9 @@ body * {
 }
 
 .title {
-    padding-top: 24px;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E0E0E0;
 }
 
 .title-only {
